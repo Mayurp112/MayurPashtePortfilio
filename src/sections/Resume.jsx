@@ -27,7 +27,7 @@ export default function Resume() {
           className="mx-auto max-w-3xl"
         >
           <div className="mb-6 flex flex-wrap justify-center gap-3">
-            <Button href={personal.resumeUrl} download icon={FaFileDownload}>
+            <Button href={personal.resumeUrl} download={personal.resumeFileName} icon={FaFileDownload}>
               Download Resume
             </Button>
             <Button
@@ -53,7 +53,7 @@ export default function Resume() {
                 <p className="text-slate-600 dark:text-slate-300">
                   Your browser can't display the embedded PDF.
                 </p>
-                <Button href={personal.resumeUrl} download icon={FaFileDownload}>
+                <Button href={personal.resumeUrl} download={personal.resumeFileName} icon={FaFileDownload}>
                   Download Resume Instead
                 </Button>
               </div>

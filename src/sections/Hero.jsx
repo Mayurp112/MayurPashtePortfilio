@@ -86,7 +86,7 @@ export default function Hero() {
           </motion.p>
 
           <motion.div variants={fadeInUp} className="mt-8 flex flex-wrap gap-3">
-            <Button href={personal.resumeUrl} download icon={FaFileDownload}>
+            <Button href={personal.resumeUrl} download={personal.resumeFileName} icon={FaFileDownload}>
               Download Resume
             </Button>
             <Button variant="outline" icon={FaFolderOpen} onClick={() => scrollToSection('projects')}>

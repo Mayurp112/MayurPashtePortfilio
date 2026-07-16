@@ -66,7 +66,7 @@ export default function Navbar({ isDark, onToggleTheme }) {
 
         {/* Right controls */}
         <div className="flex items-center gap-2">
-          <a href={personal.resumeUrl} download className="btn-primary hidden sm:inline-flex">
+          <a href={personal.resumeUrl} download={personal.resumeFileName} className="btn-primary hidden sm:inline-flex">
             Resume
           </a>
           <ThemeToggle isDark={isDark} onToggle={onToggleTheme} />
@@ -107,7 +107,7 @@ export default function Navbar({ isDark, onToggleTheme }) {
                 </li>
               ))}
               <li>
-                <a href={personal.resumeUrl} download className="btn-primary mt-2 w-full">
+                <a href={personal.resumeUrl} download={personal.resumeFileName} className="btn-primary mt-2 w-full">
                   Download Resume
                 </a>
               </li>

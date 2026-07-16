@@ -22,6 +22,8 @@ export const personal = {
   // Prefix with Vite's BASE_URL so the link resolves correctly when the
   // site is served from a project subpath (e.g. /MayurPashtePortfilio/).
   resumeUrl: `${import.meta.env.BASE_URL}resume.pdf`,
+  // Suggested filename when a recruiter downloads the resume.
+  resumeFileName: 'Mayur_Pashte_Resume.pdf',
 
   // Contact form backend (optional). Create a free form at https://formspree.io,
   // then paste your endpoint here, e.g. 'https://formspree.io/f/abcdwxyz'.
