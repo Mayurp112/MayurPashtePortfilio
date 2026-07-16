@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Anti-flash: apply the saved/preferred theme BEFORE React mounts so
+         dark-mode users never see a white flash on load. -->
+    <script>
+      (function () {
+        try {
+          var t = localStorage.getItem('portfolio-theme');
+          var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+          if (t === 'dark' || (!t && prefersDark)) {
+            document.documentElement.classList.add('dark');
+          }
+        } catch (e) {}
+      })();
+    </script>
+
+    <!-- SEO metadata -->
+    <title>Mayur Pashte | Software Engineer — Python Backend · AWS · GenAI</title>
+    <meta
+      name="description"
+      content="Mayur Pashte — Software Engineer with 2+ years building Python backends, cloud-native systems on AWS, and GenAI integrations. Explore my projects, skills, and experience."
+    />
+    <meta name="author" content="Mayur Pashte" />
+    <meta name="keywords" content="Mayur Pashte, Software Engineer, Python, FastAPI, AWS, Backend Developer, GenAI, Portfolio" />
+    <meta name="theme-color" content="#4f46e5" />
+
+    <!-- Open Graph / social preview -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Mayur Pashte | Software Engineer" />
+    <meta property="og:description" content="Python Backend · AWS · GenAI. Enterprise-scale systems, event-driven automation, and AI integration." />
+    <!-- TODO: replace with your deployed URL and a social preview image in /public -->
+    <meta property="og:url" content="https://your-domain.com" />
+    <meta property="og:image" content="/og-image.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
