@@ -18,8 +18,10 @@ export const personal = {
   email: 'mayurpashte04@gmail.com',
   phone: '+91 9307880940',
 
-  // Resume file lives in /public (see public/README-ASSETS.md)
-  resumeUrl: '/resume.pdf',
+  // Resume file lives in /public (see public/README-ASSETS.md).
+  // Prefix with Vite's BASE_URL so the link resolves correctly when the
+  // site is served from a project subpath (e.g. /MayurPashtePortfilio/).
+  resumeUrl: `${import.meta.env.BASE_URL}resume.pdf`,
 
   // Contact form backend (optional). Create a free form at https://formspree.io,
   // then paste your endpoint here, e.g. 'https://formspree.io/f/abcdwxyz'.
